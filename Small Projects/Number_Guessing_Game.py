@@ -1,7 +1,7 @@
 import sys
 import random
 # to run the code input the following code into the console and put it in the "Learning Files" folder
-# py Number_Guessing_Game.py -n "Dylan"
+# py Number_Guessing_Game.py -n "Name"
 def guess_num(name='PlayerOne'):
     game_count = 0
     wins = 0
