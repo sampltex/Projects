@@ -1,5 +1,4 @@
 import pygame
-
 import math
 
 def line_circle_collision(line_start, line_end, circle_center, circle_radius):
@@ -26,12 +25,14 @@ def line_circle_collision(line_start, line_end, circle_center, circle_radius):
         return (x_closest, y_closest)
     return False
 
-
 pygame.init()
 
 screen = pygame.display.set_mode((1024,576))
 
 clock = pygame.time.Clock()
+
+circle_center = [768,270] # MODIFY HOWEVER
+circle_radius = 75 # MODIFY HOWEVER
 
 while True:
     # Process inputs.
@@ -45,8 +46,6 @@ while True:
 
     posx,posy = pygame.mouse.get_pos()
 
-    circle_center = (768,270) # MODIFY HOWEVER
-    circle_radius = 75 # MODIFY HOWEVER
     startVal = 1000 # DO NOT TOUCH
     endVal = 1000 # DO NOT TOUCH
     rayNumber = 40 # DO NOT TOUCH
@@ -60,6 +59,9 @@ while True:
             circle_radius += 5
         elif event.key == pygame.K_DOWN:
             circle_radius -= 5
+        elif event.key == pygame.K_BACKSPACE:
+            circle_center = [768,270] 
+            circle_radius = 75
 
     
     screen.fill("black")
@@ -89,6 +91,5 @@ while True:
 
         startVal -= 50
         endVal -= 50
-
 
     pygame.display.update()
