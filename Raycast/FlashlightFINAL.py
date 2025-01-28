@@ -1,6 +1,8 @@
 import pygame
 import math
 
+print("---CONTROLS---\nUse arrow keys to change the size and position of the circle.\nPress backspace to reset size and position.")
+
 def line_circle_collision(line_start, line_end, circle_center, circle_radius):
 
     dx = line_end[0] - line_start[0]
